@@ -1,0 +1,76 @@
+:root {
+  color-scheme: dark;
+
+  --bg: #080b10;
+  --panel: #131a24;
+  --panel-raised: #1b2533;
+  --line: #2a3648;
+  --text: #f3f7fc;
+  --muted: #93a5bb;
+
+  /* Urgency ramp. Also mirrored as text on every ticket so the board stays
+     readable for a colour-blind cook or a washed-out kitchen monitor. */
+  --normal: #344cd3;
+  --warning: #fbbf24;
+  --late: #fb923c;
+  --critical: #f87171;
+  --ready: #34d399;
+
+  /* Recall is a state, not an urgency level, so it gets a hue outside the ramp
+     above — a recalled ticket keeps its own urgency colour and adds this. */
+  --recalled: #c084fc;
+
+  /* REFIRE identity — deliberately a vivid fuchsia/magenta, not a violet, so
+     it never reads as a variation on --recalled: a REFIRE ticket that's also
+     been recalled needs both signals to stay legible at a glance. */
+  --refire: #f0399f;
+  --refire-tint: rgba(240, 57, 159, 0.14);
+
+  --radius: 14px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: ui-sans-serif, system-ui, "Segoe UI", Roboto, Helvetica, Arial,
+    sans-serif;
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+  /* Kitchen touchscreen: no rubber-banding, no accidental text selection. */
+  overscroll-behavior: none;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+button {
+  font: inherit;
+  color: inherit;
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
+}
+
+:focus-visible {
+  outline: 3px solid #7dd3fc;
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

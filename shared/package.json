@@ -1,0 +1,16 @@
+{
+  "name": "@zkds/shared",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "main": "./domain/index.ts",
+  "types": "./domain/index.ts",
+  "scripts": {
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run"
+  },
+  "devDependencies": {
+    "typescript": "^5.8.0",
+    "vitest": "^3.1.0"
+  }
+}

@@ -1,0 +1,1 @@
+ALTER TYPE "public"."station" ADD VALUE 'BAR' BEFORE 'WINDOW';

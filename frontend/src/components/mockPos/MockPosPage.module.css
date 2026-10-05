@@ -1,0 +1,162 @@
+.screen {
+  min-height: 100%;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.identity {
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+}
+
+.eyebrow {
+  font-size: 0.85rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  color: var(--muted);
+}
+
+.title {
+  margin: 0;
+  font-size: 2rem;
+  font-weight: 900;
+  letter-spacing: 0.02em;
+}
+
+.subtitle {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.95rem;
+  max-width: 70ch;
+}
+
+.subtitle code {
+  color: var(--text);
+}
+
+.scenarios {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 16px;
+}
+
+.sectionTitle {
+  margin: 0 0 6px;
+  font-size: 1.1rem;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+}
+
+.sectionHint {
+  margin: 0 0 12px;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.rush {
+  padding: 18px;
+  border: 2px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--panel);
+}
+
+.rushButtons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.rushButton {
+  min-height: 56px;
+  padding: 0 24px;
+  border: 0;
+  border-radius: 10px;
+  background: var(--warning);
+  color: #1a0b2e;
+  font-size: 1rem;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+  cursor: pointer;
+}
+
+.rushButton:active {
+  filter: brightness(0.85);
+}
+
+.rushButton:disabled {
+  background: var(--panel-raised);
+  color: var(--muted);
+  cursor: not-allowed;
+}
+
+.activity {
+  padding: 18px;
+  border: 2px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--panel);
+}
+
+.activityEmpty {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.activityList {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  max-height: 360px;
+  overflow-y: auto;
+}
+
+.activityEntry {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 10px;
+  padding: 8px 12px;
+  border-radius: 8px;
+  background: var(--panel-raised);
+  border-left: 4px solid var(--line);
+}
+
+.activityEntry[data-outcome="created"] {
+  border-left-color: var(--ready);
+}
+
+.activityEntry[data-outcome="accepted-no-work"] {
+  border-left-color: var(--normal);
+}
+
+.activityEntry[data-outcome="error"] {
+  border-left-color: var(--critical);
+}
+
+.activityScenario {
+  font-weight: 800;
+}
+
+.activityOrder {
+  font-variant-numeric: tabular-nums;
+  color: var(--muted);
+}
+
+.activityDetail {
+  color: var(--muted);
+  font-size: 0.9rem;
+}

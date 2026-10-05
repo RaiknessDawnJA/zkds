@@ -1,0 +1,115 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  border: 2px solid var(--line);
+  border-left: 10px solid var(--recalled);
+  border-radius: var(--radius);
+  background: var(--panel);
+  overflow: hidden;
+}
+
+.info {
+  padding: 14px 18px 16px;
+}
+
+.topRow {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.table {
+  font-size: 1.6rem;
+  font-weight: 900;
+  letter-spacing: 0.03em;
+}
+
+.order {
+  font-size: 1.2rem;
+  font-weight: 800;
+  font-variant-numeric: tabular-nums;
+  color: var(--muted);
+}
+
+.metaRow {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px 14px;
+  margin-top: 6px;
+}
+
+.server {
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.bumpedAgo {
+  font-size: 1rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  color: var(--muted);
+}
+
+.bumpedTimer {
+  font-variant-numeric: tabular-nums;
+  color: var(--text);
+}
+
+.stationList {
+  margin-top: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.stationLine {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 8px;
+}
+
+.stationName {
+  padding: 2px 8px;
+  border-radius: 6px;
+  background: var(--panel-raised);
+  font-size: 0.9rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  color: var(--muted);
+}
+
+.stationItems {
+  font-size: 1.05rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.recall {
+  width: 100%;
+  min-height: 72px;
+  border: 0;
+  border-top: 2px solid var(--recalled);
+  background: var(--recalled);
+  color: #1a0b2e;
+  font-size: 1.35rem;
+  font-weight: 900;
+  letter-spacing: 0.16em;
+  cursor: pointer;
+}
+
+.recall:active {
+  filter: brightness(0.85);
+}
+
+.recall:disabled {
+  background: var(--panel-raised);
+  color: var(--muted);
+  cursor: not-allowed;
+}

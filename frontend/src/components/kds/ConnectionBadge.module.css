@@ -1,0 +1,64 @@
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 14px;
+  border-radius: 999px;
+  border: 2px solid var(--line);
+  background: var(--panel-raised);
+  font-size: 0.8rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  color: var(--muted);
+  white-space: nowrap;
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  flex-shrink: 0;
+  border-radius: 999px;
+  background: var(--muted);
+}
+
+.badge[data-status="ONLINE"] .dot {
+  background: var(--ready);
+}
+
+.badge[data-status="CONNECTING"],
+.badge[data-status="RECONNECTING"] {
+  border-color: var(--warning);
+  color: var(--warning);
+}
+
+.badge[data-status="CONNECTING"] .dot,
+.badge[data-status="RECONNECTING"] .dot {
+  background: var(--warning);
+  animation: connectionPulse 1.2s ease-in-out infinite;
+}
+
+.badge[data-status="OFFLINE"] {
+  border-color: var(--critical);
+  background: rgba(248, 113, 113, 0.14);
+  color: var(--critical);
+}
+
+.badge[data-status="OFFLINE"] .dot {
+  background: var(--critical);
+}
+
+@keyframes connectionPulse {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.3;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .dot {
+    animation: none !important;
+  }
+}

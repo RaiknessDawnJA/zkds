@@ -1,0 +1,81 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 18px;
+  border: 2px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--panel);
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.title {
+  margin: 0;
+  font-size: 1.15rem;
+  font-weight: 900;
+  letter-spacing: 0.02em;
+}
+
+.badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.badge {
+  padding: 2px 8px;
+  border-radius: 6px;
+  background: var(--panel-raised);
+  font-size: 0.8rem;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  color: var(--muted);
+}
+
+.description {
+  margin: 0;
+  font-size: 0.95rem;
+  color: var(--muted);
+  min-height: 2.6em;
+}
+
+.fireButton {
+  min-height: 56px;
+  border: 0;
+  border-radius: 10px;
+  background: var(--normal);
+  color: var(--text);
+  font-size: 1.05rem;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+  cursor: pointer;
+}
+
+.fireButton:active {
+  filter: brightness(0.85);
+}
+
+.fireButton:disabled {
+  background: var(--panel-raised);
+  color: var(--muted);
+  cursor: not-allowed;
+}
+
+.statusSuccess {
+  margin: 0;
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--ready);
+}
+
+.statusError {
+  margin: 0;
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--critical);
+}

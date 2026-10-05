@@ -1,0 +1,42 @@
+.grid {
+  display: grid;
+  /* Columns collapse on their own as the display narrows, so the board never
+     needs horizontal scrolling. */
+  grid-template-columns: repeat(auto-fill, minmax(330px, 1fr));
+  align-items: start;
+  gap: 18px;
+  padding: 18px 24px 32px;
+}
+
+.empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  flex: 1;
+  padding: 80px 24px;
+  text-align: center;
+}
+
+.emptyTitle {
+  margin: 0;
+  font-size: 2rem;
+  font-weight: 900;
+  letter-spacing: 0.14em;
+  color: var(--muted);
+}
+
+.emptyHint {
+  margin: 0;
+  font-size: 1.15rem;
+  color: var(--muted);
+}
+
+@media (max-width: 900px) {
+  .grid {
+    grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
+    gap: 14px;
+    padding: 14px 16px 28px;
+  }
+}
