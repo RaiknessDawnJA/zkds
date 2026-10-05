@@ -1,6 +1,7 @@
 {
   "name": "zkds",
   "private": true,
+  "license": "UNLICENSED",
   "workspaces": [
     "frontend",
     "backend",

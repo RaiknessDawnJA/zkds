@@ -2,6 +2,7 @@
   "name": "@zkds/shared",
   "version": "0.1.0",
   "private": true,
+  "license": "UNLICENSED",
   "type": "module",
   "main": "./domain/index.ts",
   "types": "./domain/index.ts",
